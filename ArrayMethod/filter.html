@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [5,10,14,20,25,8,9]
+          // basic ,ethod use
+        //   let newArr1 = []
+        // for(let i=0; i<arr.length; i++){
+        //     if(arr[i]%2 === 0){
+        //     newArr1.push(arr[i])
+        //     }
+        // }
+        // console.log(newArr1)
+
+        
+        //use filter method
+        let newarr = arr.filter((element, index) => {
+             return element%5 === 0
+        })
+        console.log(newarr)
+
+      
+        
+    </script>
+</body>
+</html>

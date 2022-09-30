@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Return the array of modified element as per the given code
+        //length of original and modified are same
+        // no change in input array
+
+        let arr = ['Vikash', 'Vineet', 'Waris', 'Raju', 'Mahbood', 'Javed']
+
+        let newArr = arr.map(function(element, index){
+            if(element != 'Waris')
+            return element + 5 
+        })
+        console.log(newArr)
+    </script>
+</body>
+</html>
