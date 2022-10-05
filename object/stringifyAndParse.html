@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="dispaly-object"></h1>
+    <script>
+        // let object ={
+        //     passenger:5,
+        //     wheel:4,
+        // }
+        // console.log(object)
+        // document.getElementById('dispaly-object').innerHTML = JSON.stringify(object)
+        
+// if add another variable
+let x = {
+    a:1,
+    b:5,
+}
+x.c = 15
+console.log(x)
+
+// how to use Array as a value inside object
+
+let bank = {
+    branch: 'gomoh',
+    IFSCCode: 123456,
+    name: 'SBI',
+    isOperational: true,
+    accountAvailable: ['saving', 'current', 'PPF']
+}
+console.log(bank.name)
+console.log(bank.accountAvailable[0])
+
+//Object inside array
+
+let students = [{
+    FirstName: 'Waris',
+    LastName: 'Alam',
+    batch: 10,
+    LikeDancing: false
+   },
+   {
+    FirstName: 'Vineet',
+    LastName: 'Raj',
+    batch: 11,
+    LikeDancing: true
+   },
+   {
+    FirstName: 'Vikash',
+    LastName: 'Sing',
+    batch: 12,
+    LikeDancing: true
+   }]
+   console.log(students[0].batch)
+
+// create object and access key and value from the object
+
+  let waris1 = {
+    FirstName: 'Waris',
+    LastName: 'Alam',
+    isGraduated: true,
+    hobbies: ['dancing', 'cooking', 'singing'],
+    noOfcompaniesApply: 3
+  } 
+  let vineet = {
+    FirstName: 'vineet',
+    LastName: 'Raj',
+    isGraduated: true,
+    hobbies: ['dancing', 'cooking', 'singing'],
+    noOfcompaniesApply: 4
+  } 
+  console.log(Object.keys(waris1))
+  console.log(Object.keys(vineet))
+  console.log(Object.values(waris1))
+
+  // Return all key and value
+  console.log(Object.entries(waris1))
+    </script>
+</body>
+</html>

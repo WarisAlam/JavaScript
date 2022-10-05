@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = [
+            {
+            name: 'Waris',
+            batch: 10,
+            likeIceCream: true,
+           },
+           {
+            name: 'Vineet',
+            batch: 11,
+            likeIceCream: false,
+           },
+           {
+            name: 'Vikash',
+            batch: 12,
+            likeIceCream: true,
+           },
+           {
+            name: 'Raju',
+            batch: 9,
+            likeIceCream: false,
+           },
+        ]
+
+// use normal method
+      
+        let studentLikeIceCream = [];
+        for(let i=0; i<students.length; i++){
+            if(students[i].likeIceCream == true){
+                studentLikeIceCream.push(students[i])
+            }
+        }
+        console.log(studentLikeIceCream)
+
+// use forEach method
+        let studentWhoLikeIceCream = [];
+        students.forEach(function(element, index){
+            if(element.likeIceCream == true){
+                studentWhoLikeIceCream.push(element)
+            }
+        })
+        console.log(studentWhoLikeIceCream)
+
+  // use filter method
+        let studentWhoLikeIceCream1 = students.filter(function(element, index){
+            return element.likeIceCream === false
+        }) 
+        console.log(studentWhoLikeIceCream1)
+
+ // use Arrow function
+      let studentLikeIceCream2 = students.filter(students => students.likeIceCream === true)
+      console.log(studentLikeIceCream2)
+
+/*..................................................................*/
+  let students1 = [
+    {
+        name: 'Anjar',
+        marks: {
+            Scienc: 80,
+            class: 8,
+            SocialScience: 70,
+            Hindi: 80,
+            Maths: 90,
+            English: 85,
+        }
+    },
+    {
+        name: 'Arshad',
+        marks: {
+            Scienc: 75,
+            class: 9,
+            SocialScience: 78,
+            Hindi: 84,
+            Maths: 99,
+            English: 73,
+        }
+    },
+    {
+        name: 'Asif',
+        marks: {
+            Scienc: 78,
+            class: 10,
+            SocialScience: 83,
+            Hindi: 88,
+            Maths: 97,
+            English: 76,
+        }
+    },
+    {
+        name: 'Zahid',
+        marks: {
+            Scienc: 87,
+            class: 12,
+            SocialScience: 80,
+            Hindi: 81,
+            Maths: 96,
+            English: 79,
+        }
+    },
+] 
+let studetsWithCalculateMarks = [];
+for(let i=0; i<students.length; i++){
+    let students2 = students1[i];
+    let object = {};
+    object.name = students2.name;
+    object.class = students2.class;
+
+   let sum = 0;
+   for(let j=0; j < object.values(students2.marks).length; j++){
+    sum += object.values(students2.marks)[j];
+   }
+   object.averageMarks = sum/5;
+   studetsWithCalculateMarks.push(object)
+}
+console.log(studetsWithCalculateMarks)
+    </script>
+</body>
+</html>
